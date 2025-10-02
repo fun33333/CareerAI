@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 from agents import Agent, Runner, AsyncOpenAI, OpenAIChatCompletionsModel, set_tracing_disabled
-from tools.web_search import web_search
+# from tools.web_search import web_search
 
 load_dotenv()
 set_tracing_disabled(True)

@@ -3,7 +3,7 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from agents import Agent, Runner
+from agents import Agent, ModelSettings
 from agent_files.websearch_agent import websearch_agent
 # from config.prompt_templates import PROMPTS
 from config.agents_config import model
@@ -16,4 +16,8 @@ main_agent = Agent(
     """,
     handoffs=[websearch_agent],
     model=model,
+    model_settings=ModelSettings(
+        temperature=0.8,  # Very creative
+        max_tokens=300    # Short but creative
+    )
 )
